@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
+#define ll long long
+#define pb push_back
+#define all(v) v.begin(), v.end()
+#define nl '\n'
+
+const int MOD = 1e9 + 7;
+
+int main() {
+    fastio;
+    int t = 1;
+    cin >> t;
+    while (t--) {
+        int a, b;
+        cin >> a >> b;
+
+        if(a > b) {
+            swap(a, b);
+        }
+
+        if((a+b) % 3 == 0 && a * 2 >= b) {
+            cout << "YES" << nl;
+        } else {
+            cout << "NO" << nl;
+        }
+    }
+    return 0;
+}
